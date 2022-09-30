@@ -1,0 +1,17 @@
+.main{
+    
+    margin: 12px auto;
+    display: block;
+}
+.main-right{
+    /* width: 500px; */
+}
+.main-right>div {
+    /* display: flex; */
+    margin: 12px;
+    font-size: 1.2rem;
+}
+.main-right>div span:first-child{
+    color: var(--hover-color);
+
+}

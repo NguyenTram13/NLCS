@@ -1,0 +1,97 @@
+.main {
+    display: flex;
+    /* width: 1300px; */
+    padding-top: 90px;
+    margin: 0 auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    background: url(../img/background/login.jpg) no-repeat;
+    background-size: cover;
+}
+
+.main-register {
+    margin: auto;
+    font-family: 'Playfair Display', sans-serif;
+    color: #fff;
+}
+
+.main-register form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0 50px;
+}
+
+.main-register h1 {
+    margin: 48px 0;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 8px;
+}
+
+.main-register-item {
+    font-size: 1.5rem;
+    margin: 12px 0;
+
+}
+
+.main-register-item input {
+    font-size: 1.5rem;
+    padding: 12px;
+    width: 500px;
+    margin: 12px 0;
+}
+
+.main-register-item-content span:last-child {
+    color: red;
+}
+
+.main-register-btn {
+
+
+
+    width: 250px;
+    height: 70px;
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    color: #98cb50;
+    background-color: #fff;
+    border-color: #98cb50;
+}
+
+.main-register-btn:hover {
+    background-color: #98cb50;
+    color: #fff;
+}
+
+.main-register-return {
+    text-decoration: none;
+    color: #fff;
+    text-align: right;
+    font-size: 1.5rem;
+    display: inline-block;
+}
+
+.main-register-return:hover {
+    color: #98cb50;
+
+}
+
+.error {
+    color: red;
+}
+
+.mess {
+    width: 1050px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+
+}
