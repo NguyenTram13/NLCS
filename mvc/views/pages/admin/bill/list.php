@@ -62,6 +62,12 @@
                             </a>
 
                         </td>
+
+
+
+
+
+
                         <td class="text-center border-gray-300"><?php echo $bill['created_at'] ?></td>
                         <td class="text-center border-gray-300"><a href="<?php echo _WEB_ROOT . '/bill/listDetail/' . $bill['id'] ?>" class=" hover:text-[#98cb50]  text-[30px] cursor-pointer"><i class="fa-regular fa-eye"></i></a></td>
 
