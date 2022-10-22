@@ -69,7 +69,7 @@
                     <tr>
                         <td><?php echo $item['id'] ?></td>
                         <td><?php echo $item['name'] ?></td>
-                        <td><?php echo  '<img height="80" src="' . $hinhpath . '"/> ' ?></td>
+                        <td><?php echo  '<img width=80" src="' . $hinhpath . '"/> ' ?></td>
                         <td><?php echo $item['price'] ?></td>
                         <td><?php echo $item['describes'] ?></td>
                         <td><?php echo $item['views'] ?></td>

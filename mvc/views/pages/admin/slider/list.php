@@ -52,7 +52,7 @@
                     <tr>
                         <td><?php echo $item['id'] ?></td>
                         <td><?php echo $item['caption'] ?></td>
-                        <td><?php echo '<img height="80" src="' . $hinhpath . '"/>' ?></td>
+                        <td><?php echo '<img width="80" src="' . $hinhpath . '"/>' ?></td>
 
                         <td><?php echo $item['title'] ?></td>
                         <td><?php echo $item['created_at'] ?></td>

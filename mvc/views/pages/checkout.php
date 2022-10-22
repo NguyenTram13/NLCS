@@ -137,6 +137,9 @@
                                                     </label>
                                                 </div>
                                                 <div id="paypal-button-container" class="p-3"></div>
+                                                <div class="vn_pay"><img class="shadow-lg mb-3 rounded-lg cursor-pointer transition-all hover:scale-105" src="<?php echo  _PATH_ROOT_PUBLIC . '/img/bill/vnpay.png' ?>" alt=""></div>
+
+
                                             </div>
                                         </td>
                                     </tr>
@@ -152,7 +155,28 @@
                 </div>
             </div>
         </form>
+        <form id="submit_vnpay" data-url="<?php echo _WEB_ROOT . '/bill/setSession' ?>" action="<?php echo _WEB_ROOT . '/bill/vnPay' ?>" method="post">
 
+            <input type=" hidden" name="sum" value=" <?php echo number_format($pay, 2) ?>">
+            <input type="hidden" name="redirect" value="redirect">
+
+        </form>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+        <script>
+            const vn_pay = document.querySelector('.vn_pay');
+            const form_vn_pay = document.querySelector('#submit_vnpay');
+            console.log(form_vn_pay)
+            vn_pay.addEventListener('click', function(e) {
+
+
+
+                e.preventDefault();
+                form_vn_pay.submit()
+
+
+            })
+        </script>
         <script>
             let summoney = document.querySelector('.summoney');
             let formPayment = document.querySelector('#signupForm');
