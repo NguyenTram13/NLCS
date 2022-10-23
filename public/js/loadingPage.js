@@ -1,6 +1,13 @@
 let loading = document.querySelector(".coffee");
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    loading.classList.add("hidden");
-  }, 2000);
-});
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    console.log(document.readyState);
+    document.querySelector("body").style.visibility = "hidden";
+    loading.classList.remove("invisible");
+  } else {
+    console.log("asdasd");
+    loading.classList.add("invisible");
+
+    document.querySelector("body").style.visibility = "visible";
+  }
+};

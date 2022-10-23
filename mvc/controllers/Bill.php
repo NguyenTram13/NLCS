@@ -169,6 +169,8 @@ class Bill extends Controller
     }
     function vnPay()
     {
+
+        $sum = $_POST['sum'];
         $vnp_Url = "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html";
         $vnp_Returnurl = _WEB_ROOT . "/bill/vnpay_return";
         $vnp_TmnCode = "842I1F04"; //Mã website tại VNPAY 
@@ -177,7 +179,7 @@ class Bill extends Controller
         $vnp_TxnRef = rand(); //Mã đơn hàng. Trong thực tế Merchant cần insert đơn hàng vào DB và gửi mã này sang VNPAY
         $vnp_OrderInfo = 'Thanh toán đơn hàng test';
         $vnp_OrderType = 'billpayment';
-        $vnp_Amount = 100 * 23000 * 100;
+        $vnp_Amount =   (float)$sum * 23000 * 100;
         $vnp_Locale = 'vn';
         $vnp_BankCode = 'NCB';
         $vnp_IpAddr = $_SERVER['REMOTE_ADDR'];

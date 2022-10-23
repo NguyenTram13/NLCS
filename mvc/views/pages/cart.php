@@ -99,7 +99,7 @@
                                     <div class="mb-3 text-[#888888] font-[0.875rem] ">
                                         <label for="" class="form-label">Address:</label>
                                         <textarea class="form-control" id="" rows="3" placeholder="Nhập địa chỉ giao hàng ">
-                                        <?php echo $_SESSION['user']['address'] ?>
+                                        <?php echo trim($_SESSION['user']['address'], " ") ?>
                                         </textarea>
                                     </div>
                                 </div>

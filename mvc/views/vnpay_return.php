@@ -38,9 +38,9 @@ foreach ($urlNew as $item) {
 
     $startTime = date("YmdHis");
     $expire = date('YmdHis', strtotime('+15 minutes', strtotime($startTime)));
-    $vnp_SecureHash = $arrLast['vnp_SecureHash'];
+    $vnp_SecureHash = $_GET['vnp_SecureHash'];
     $inputData = array();
-    foreach ($arrLast as $key => $value) {
+    foreach ($_GET as $key => $value) {
         if (substr($key, 0, 4) == "vnp_") {
             $inputData[$key] = $value;
         }
@@ -74,47 +74,47 @@ foreach ($urlNew as $item) {
             <div class="form-group">
                 <label>Mã đơn hàng:</label>
 
-                <label><?php echo $arrLast['vnp_TxnRef'] ?></label>
+                <label><?php echo $_GET['vnp_TxnRef'] ?></label>
             </div>
             <div class="form-group">
 
                 <label>Số tiền:</label>
-                <label><?php echo $arrLast['vnp_Amount'] ?></label>
+                <label><?php echo $_GET['vnp_Amount'] ?></label>
             </div>
             <div class="form-group">
                 <label>Nội dung thanh toán:</label>
-                <label><?php echo $arrLast['vnp_OrderInfo'] ?></label>
+                <label><?php echo $_GET['vnp_OrderInfo'] ?></label>
             </div>
             <div class="form-group">
                 <label>Mã phản hồi (vnp_ResponseCode):</label>
-                <label><?php echo $arrLast['vnp_ResponseCode'] ?></label>
+                <label><?php echo $_GET['vnp_ResponseCode'] ?></label>
             </div>
             <div class="form-group">
                 <label>Mã GD Tại VNPAY:</label>
 
-                <label><?php echo $arrLast['vnp_TransactionNo'] ?></label>
+                <label><?php echo $_GET['vnp_TransactionNo'] ?></label>
             </div>
             <div class="form-group">
                 <label>Mã Ngân hàng:</label>
-                <label><?php echo $arrLast['vnp_BankCode'] ?></label>
+                <label><?php echo $_GET['vnp_BankCode'] ?></label>
             </div>
             <div class="form-group">
                 <label>Thời gian thanh toán:</label>
-                <label><?php echo $arrLast['vnp_PayDate'] ?></label>
+                <label><?php echo $_GET['vnp_PayDate'] ?></label>
             </div>
             <div class="form-group">
                 <label>Kết quả:</label>
                 <label>
                     <?php
-                    // if ($secureHash == $vnp_SecureHash) {
-                    if ($arrLast['vnp_ResponseCode'] == '00') {
-                        echo "<span style=  'color:blue'>GD Thanh cong</span>";
+                    if ($secureHash == $vnp_SecureHash) {
+                        if ($_GET['vnp_ResponseCode'] == '00') {
+                            echo "<span style=  'color:blue'>GD Thanh cong</span>";
+                        } else {
+                            echo "<span style='color:red'>GD Khong thanh cong</span>";
+                        }
                     } else {
-                        echo "<span style='color:red'>GD Khong thanh cong</span>";
+                        echo "<span style='color:red'>Chu ky khong hop le</span>";
                     }
-                    // } else {
-                    //     echo "<span style='color:red'>Chu ky khong hop le</span>";
-                    // }
                     ?>
 
                 </label>

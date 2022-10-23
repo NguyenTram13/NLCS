@@ -6,6 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="<?php echo  _PATH_ROOT_PUBLIC . '/js/loadingPage.js' ?>" type="module"></script>
+    <script>
+        // setTimeout(() => {
+        //     loading.classList.add("hidden");
+        // }, 2000);
+    </script>
+    <script>
+
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -20,6 +28,7 @@
     <link rel="icon" href="<?php echo _PATH_ROOT_PUBLIC . '/img/logo/plant4.png' ?>" />
     <link rel="stylesheet" href="./dist/output.css">
     <script src="https://www.paypal.com/sdk/js?client-id=Aco3m3_VuoyW5N36CxwYZMrvbpCVo7nyw6oXZlpB3dXoIiZpM5JxaCm8BhYGkvIfxEnEj1ywOS-R0s5L&currency=USD"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
     <title>VTea</title>
     <?php
 
@@ -31,7 +40,7 @@
 </head>
 
 <body>
-    <div class="coffee  fixed bg-gray-400 z-[999] flex items-center justify-center w-full h-full " style="top:0;bottom:0;right:0;left:0;" role="img" aria-label=" cup spinning and stretching from side to side">
+    <div class="coffee  fixed bg-gray-400 z-[999] flex items-center justify-center w-full h-full invisible" style="top:0;bottom:0;right:0;left:0;" role="img" aria-label=" cup spinning and stretching from side to side">
         <div class="coffee__cup ">
             <div class="coffee__cup-part coffee__cup-part--a"></div>
             <div class="coffee__cup-part coffee__cup-part--b"></div>
@@ -512,6 +521,11 @@
     <script>
         AOS.init();
     </script>
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!--Plugin JavaScript file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.4/jquery.rateyo.min.js" integrity="sha512-09bUVOnphTvb854qSgkpY/UGKLW9w7ISXGrN0FR/QdXTkjs0D+EfMFMTB+CGiIYvBoFXexYwGUD5FD8xVU89mw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <?php

@@ -164,6 +164,16 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
         <script>
+
+        </script>
+        <script>
+            let summoney = document.querySelector('.summoney');
+            let formPayment = document.querySelector('#signupForm');
+
+
+
+            //vnpay
+
             const vn_pay = document.querySelector('.vn_pay');
             const form_vn_pay = document.querySelector('#submit_vnpay');
             console.log(form_vn_pay)
@@ -172,19 +182,43 @@
 
 
                 e.preventDefault();
-                form_vn_pay.submit()
+                //goi ajax
+                const pttt = 'Vnpay';
+                const lastName = formPayment.querySelector('input[name="lastname"]').value;
+                const address = formPayment.querySelector('input[name="address"]').value;
+                const phone = formPayment.querySelector('input[name="phone"]').value;
+                let redirect = formPayment.dataset.url;
+
+                $.ajax({
+                    type: "POST",
+                    url: formPayment.getAttribute('action'),
+                    data: {
+                        pttt,
+                        lastName,
+                        address,
+                        phone,
+                    },
+                    dataType: "text",
+                    success: function(data) {
+                        if (data) {
+                            location.href = redirect + "/" + data;
+
+                            form_vn_pay.submit();
+                        }
+
+                    },
+                    error: function(e) {
+                        console.log(e);
+                    },
+                });
+
+
 
 
             })
-        </script>
-        <script>
-            let summoney = document.querySelector('.summoney');
-            let formPayment = document.querySelector('#signupForm');
-
+            //paypal
             formPayment.addEventListener('submit', function(e) {
                 e.preventDefault();
-
-
             });
 
 

@@ -19,6 +19,14 @@ class Ajax extends Controller
             echo 'asdsasdas';
         }
     }
+
+    function filter_min_max()
+    {
+        $min = $_POST['min'];
+        $max = $_POST['max'];
+        $products = $this->product->getProsMinMax($min, $max);
+        print_r(json_encode($products));
+    }
     function addCard()
     {
         $id = $_POST['id'];
@@ -44,7 +52,6 @@ class Ajax extends Controller
 
         $address = $_POST['address'];
         $phone = $_POST['phone'];
-        $lastName = $_POST['lastName'];
         $date = date('Y-m-d H:i:s');
         $sumCart = 0;
         foreach ($_SESSION['cart'] as $item) {

@@ -35,6 +35,7 @@ class Shop extends Controller
             'js' => [
                 'main',
                 'ajax',
+                'sliderPrice'
             ],
             "settings" => $settings,
             "menus" => $menus,

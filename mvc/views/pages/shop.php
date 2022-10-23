@@ -33,7 +33,7 @@
 
                             </ul>
                         </div>
-                        <div class="msc-left-item">
+                        <!-- <div class="msc-left-item">
                             <h3>Product Status</h3>
                             <div class="mscl-center-item">
                                 <div class="form-check">
@@ -56,8 +56,8 @@
                                 </div>
                             </div>
 
-                        </div>
-                        <div class="msc-left-item">
+                        </div> -->
+                        <!-- <div class="msc-left-item">
                             <h3>Filter by price</h3>
                             <div class="mscl-bottom-filter">
                                 <span class="filter-left"></span>
@@ -78,7 +78,11 @@
                             <button class="btn-filter">
                                 filter
                             </button>
-                        </div>
+                        </div> -->
+
+                        <div id="demo_2"></div>
+
+                        <div data-pathimg="<?php echo _PATH_UPLOAD_PRODUCT ?>" data-url=" <?php echo _WEB_ROOT . '/ajax' ?>" class="filter get-filter text-center px-4 py-2 bg-slate-50 rounded-lg mt-3 text-green-500 border-2 cursor-pointer hover:text-slate-50 transition-all font-semibold border-green-500 hover:bg-green-500">Filter</div>
                     </div>
                 </div>
                 <div class="col-9">
