@@ -163,4 +163,11 @@ class ProductModel extends DB
         }
         return json_encode($_SESSION['cart']);
     }
+
+
+    function getProsMinMax($min, $max)
+    {
+        $sql = "SELECT * FROM products WHERE price BETWEEN $min AND $max";
+        return $this->pdo_query($sql);
+    }
 }

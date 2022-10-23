@@ -82,6 +82,49 @@ $(document).ready(function () {
       }
     });
   });
+  //min max
+
+  let from = 0;
+  let to = 0;
+
+  var saveResult = function (data) {
+    console.log(data);
+    from = data.from;
+    to = data.to;
+  };
+  $("#demo_2").ionRangeSlider({
+    type: "double",
+    grid: true,
+    min: 0,
+    max: 300,
+    from: 0,
+    to: 200,
+    onChange: saveResult,
+    onFinish: saveResult,
+  });
+
+  const getValue = document.querySelector(".get-filter");
+  getValue.addEventListener("click", function (e) {
+    let url = this.dataset.url;
+    let path_img = this.dataset.pathimg;
+    $.ajax({
+      type: "POST",
+      url: url + "/filter_min_max",
+      data: { min: from, max: to },
+      dataType: "text",
+
+      success: function (data) {
+        let response = JSON.parse(data);
+        console.log(response);
+        productList.innerHTML = "";
+        response.forEach((item) => renderProduct(item, path_img, url));
+      },
+      error: function (e) {
+        console.log(e);
+      },
+    });
+  });
+  //end min max
 
   // add card
   var formatter = new Intl.NumberFormat("en-US", {
